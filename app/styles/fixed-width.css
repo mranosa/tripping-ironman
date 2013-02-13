@@ -29,7 +29,7 @@ Reset Rules End*/
 ====================================================================== */
 
 body {
-    background: url(../images/bg/noise.png);
+    background: url(/images/bg/noise.png);
     font-size: 12px;
     font-family: 'Carrois Gothic', sans-serif !important;
     color: #666;
