@@ -21,6 +21,9 @@ jQuery(document).ready(function() {
             $subMenu.hide().stop(true, true).slideDown('fast');
         }).on('mouseleave', 'li', function() {
             $(this).removeClass('hover').children('ul').stop(true, true).slideUp('fast');
+        })
+        .on('click', 'li', function() {
+            $(this).removeClass('hover').children('ul').stop(true, true).slideUp('fast');
         });
 		
     })();
