@@ -153,7 +153,7 @@
                             <a href="#/login" ng-show="nav.login">Login</a>
                         </li>
                         <li style="float: right;">
-                            <a href="#/logout" ng-hide="nav.login">Logout</a>
+                            <a ng-click="logout()" ng-hide="nav.login">Logout</a>
                         </li>
                     </ul>
                 </div> 
@@ -231,7 +231,7 @@
             </div>
             <!-- Footer / End -->
 
-        <!--script src="scripts/vendor/angular.js"></script -->
+        <script src="scripts/vendor/angular.js"></script>
         <script src="components/angular/angular.js"></script>
         <script src="components/angular-resource/angular-resource.js"></script>
         <script src="scripts/vendor/selectnav.js"></script>

@@ -1,8 +1,8 @@
 'use strict';
 
 trippingIronmanApp.controller('LoginCtrl', [
-	'$scope', '$http', 'NotificationService',
-	function($scope, $http, NotificationService) {
+	'$scope', '$http', 'NotificationService', '$rootScope', '$location',
+	function($scope, $http, NotificationService, $rootScope, $location) {
 
 	$scope.input = {
 		username: '',
@@ -29,7 +29,7 @@ trippingIronmanApp.controller('LoginCtrl', [
 					NotificationService.success('Login Success!', 'Welcome back boss ' + result[0].name + '!');
 
 					//TODO save user credentials on lawnchair
-					//TODO forward to home
+					$rootScope.$broadcast('hide_login');
 				} else {
 					NotificationService.error('Invalid Credentials!', 'Ensure username and password are correct!');
 				}
