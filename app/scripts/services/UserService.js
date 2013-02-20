@@ -4,24 +4,28 @@ trippingIronmanApp.factory('UserService', [
   '$resource', '$http', 
   function($resource, $http) {
 
-    var userRef;
-    var db = new Lawnchair({name:'user', record:'user', adapters:['dom']});
+    var isLoggedIn = false;
+    var db = new Lawnchair({name:'user', record:'user', adapters:['dom']}, function(){});
 
-    var UserService = new function(){
+    var UserService = function() {
 
-    }
+    };
 
     UserService.prototype = {
       save: function(uname){
-        db.save({key: uname, username:uname}});
+        db.save({key: uname, username:uname});
       },
-      remove: function(){
+      removeAll: function(){
         db.nuke();
       },
-      get: function(key){
-        db.get(key, function(obj){
-          return obj ? obj['value'] : undefined;
-        })
+      getDb: function(){
+        return db;
+      },
+      setIsLoggedIn: function(isLoggedInNewVal){
+        isLoggedIn = isLoggedInNewVal;
+      },
+      isLoggedIn: function(){
+        return isLoggedIn;
       }
     };
 

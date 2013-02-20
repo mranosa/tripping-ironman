@@ -34,7 +34,6 @@ trippingIronmanApp.controller('LoginCtrl', [
 						}
 
           				UserService.save($scope.input.username);
-          				UserService.getDb().all(function(res){console.log(res)});
           				$rootScope.$broadcast('hide_login');
         			});
 				} else {

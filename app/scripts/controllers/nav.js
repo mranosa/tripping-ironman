@@ -1,8 +1,8 @@
 'use strict';
 
 trippingIronmanApp.controller('NavCtrl', [
-	'$scope', '$location', 'UserService',
-	function($scope, $location, UserService) {
+	'$scope', '$location', 'UserService', 'NotificationService',
+	function($scope, $location, UserService, NotificationService) {
 	$scope.nav = {
 		login : true
 	};
@@ -12,13 +12,16 @@ trippingIronmanApp.controller('NavCtrl', [
     });
 
     $scope.hideLogin = function(){
+    	UserService.isLoggedIn(true);
     	$scope.nav.login = false;
         $location.path('/materials');
     };
 
     $scope.logout = function(){
+    	UserService.isLoggedIn(false);
     	UserService.removeAll();
     	$scope.nav.login = true;
+    	$location.path('/home');
     };
 
     UserService.getDb().all(function(res){
