@@ -72,7 +72,7 @@
                 <!-- Header / End -->
 
                 <!-- Navigation -->
-                <div id="navigation" class="margintop">
+                <div id="navigation" class="margintop" ng-controller="NavCtrl">
                     <ul id="nav">
                         <li>
                             <a href="#/"><span style="color: white">Home</span></a>
@@ -150,7 +150,10 @@
                             <a href="#/contact">Contact Us</a>
                         </li>
                         <li style="float: right;">
-                            <a href="#/login">Login</a>
+                            <a href="#/login" ng-show="nav.login">Login</a>
+                        </li>
+                        <li style="float: right;">
+                            <a href="#/logout" ng-hide="nav.login">Logout</a>
                         </li>
                     </ul>
                 </div> 
@@ -235,7 +238,7 @@
         <script src="scripts/vendor/bootstrap.js"></script>
         <script src="scripts/vendor/flexslider.js"></script>
         <script src="scripts/vendor/custom.js"></script>
-
+        <script src="components/lawnchair/src/Lawnchair.js"></script>
 
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/app.js"></script>
@@ -263,6 +266,7 @@
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/services/UserService.js"></script>
         <script src="scripts/services/NotificationService.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
