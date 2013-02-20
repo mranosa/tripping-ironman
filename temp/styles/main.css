@@ -8334,3 +8334,42 @@ ul.icons li .icon-large:before {
 .icon-user-md:before {
   content: "\f200";
 }
+
+/* haha make this scss like hahaha!!! */
+/* line 3, ../../app/styles/_notification.scss */
+.ui-pnotify.custom .ui-pnotify-container {
+  background-color: #252525 !important;
+  background-image: none !important;
+  border: none !important;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 11, ../../app/styles/_notification.scss */
+.ui-pnotify.custom .ui-pnotify-title, .ui-pnotify.custom .ui-pnotify-text {
+  font-family: Arial, Helvetica, sans-serif !important;
+  text-shadow: 2px 2px 3px black !important;
+  font-size: 10pt !important;
+  color: #FFF !important;
+  padding-left: 50px !important;
+  line-height: 1 !important;
+  text-rendering: geometricPrecision !important;
+}
+
+/* line 20, ../../app/styles/_notification.scss */
+.ui-pnotify.custom .ui-pnotify-title {
+  font-weight: bold;
+}
+
+/* line 23, ../../app/styles/_notification.scss */
+.ui-pnotify.custom .ui-pnotify-icon {
+  float: left;
+}
+
+/* line 26, ../../app/styles/_notification.scss */
+.ui-pnotify.custom .picon {
+  margin: 3px;
+  width: 33px;
+  height: 33px;
+}
