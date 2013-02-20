@@ -10,15 +10,19 @@
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width"/>
         <link rel="stylesheet" href="styles/main.css"/>
-
+        <link rel="stylesheet" href="components/pines-notify/oxygen/icons.css"/>
+        <link rel="stylesheet" href="components/pines-notify/jquery.pnotify.default.icons.css"/>
+        <link rel="stylesheet" href="components/pines-notify/jquery.pnotify.default.css"/>
         <link rel="stylesheet" href="styles/fixed-width.css">
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/colors/default.css">
 
         <script src="components/jquery/jquery.min.js"></script>
+        <script src="components/pines-notify/jquery.pnotify.min.js"></script>
         <script src="scripts/vendor/twitter.js"></script>
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="scripts/vendor/jquery.gmap.min.js"></script>
+        <script src='https://cdn.firebase.com/v0/firebase.js'></script>
 
     </head>
     <body ng-app="trippingIronmanApp">
@@ -59,8 +63,8 @@
                         <!-- Contact Details -->
                         <div id="contact-top">
                             <ul>
-                                <li><i class="icon-envelope"></i><a href="#">support@akmalz.com</a></li>
-                                <li><i class="icon-user"></i>+1 123 456-789</li>
+                                <li><i class="icon-envelope"></i><a href="#">nci.website.ph@gmail.com</a></li>
+                                <li><i class="icon-phone"></i>+1 123 456-789</li>
                             </ul>
                         </div>
                     </div>
@@ -224,7 +228,9 @@
             </div>
             <!-- Footer / End -->
 
-        <script src="scripts/vendor/angular.js"></script>
+        <!--script src="scripts/vendor/angular.js"></script -->
+        <script src="components/angular/angular.js"></script>
+        <script src="components/angular-resource/angular-resource.js"></script>
         <script src="scripts/vendor/selectnav.js"></script>
         <script src="scripts/vendor/bootstrap.js"></script>
         <script src="scripts/vendor/flexslider.js"></script>
@@ -255,6 +261,8 @@
         <script src="scripts/controllers/materials.js"></script>
         <script src="scripts/controllers/contact.js"></script>
         <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/services/UserService.js"></script>
+        <script src="scripts/services/NotificationService.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
