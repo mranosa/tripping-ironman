@@ -1,6 +1,6 @@
 'use strict';
 
-var trippingIronmanApp = angular.module('trippingIronmanApp', [])
+var trippingIronmanApp = angular.module('trippingIronmanApp', ['ngResource'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -94,4 +94,6 @@ var trippingIronmanApp = angular.module('trippingIronmanApp', [])
       .otherwise({
         redirectTo: '/'
       });
-  }]);
+  }]).config(['$httpProvider', function($httpProvider) {
+        delete $httpProvider.defaults.headers.common["X-Requested-With"]
+    }]);
