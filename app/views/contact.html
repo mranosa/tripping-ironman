@@ -16,13 +16,13 @@
             <form>
                 <fieldset>
                     <label>Name</label>
-                    <input type="text" class="input-xlarge">
+                    <input type="text" class="input-xlarge" ng-model="email.name">
 
                     <label>Email</label>
-                    <input type="text" class="input-xlarge">
+                    <input type="text" class="input-xlarge" ng-model="email.from">
 
                     <label>Comment</label>
-                    <textarea rows="6" class="input-xxlarge"></textarea>
+                    <textarea rows="6" class="input-xxlarge" ng-model="email.message"></textarea>
                 </fieldset>
 
                 <div class="form-actions">
